@@ -14,7 +14,7 @@ class FeedBackFour extends Component {
     console.log('Four has been clicked');
     // submit to DB 
     // this.props.history.push("/result");
-    this.props.dispatch({ type: 'ADD_FEEDBACK', payload: this.state.comment})
+    this.props.dispatch({ type: 'ADD_FEEDBACK', payload: {key:'Comments',value: this.state.comment}})
   }
 
   handleChange = (event) => {

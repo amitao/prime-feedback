@@ -14,7 +14,7 @@ class FeedBackOne extends Component {
   handleClick = () => {
     console.log('Feedback one has been clicked');
     this.props.history.push("/feedbacktwo");
-    this.props.dispatch({ type: 'ADD_FEEDBACK', payload: {key:'FormOne',value: this.state.newFeedBack}});
+    this.props.dispatch({ type: 'ADD_FEEDBACK', payload: {key:'Feelings',value: this.state.newFeedBack}});
     // newFeedBack
   }
 
