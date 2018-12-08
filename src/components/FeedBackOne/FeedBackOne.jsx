@@ -1,15 +1,20 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import {withRouter} from 'react-router-dom';
 
 
 class FeedBackOne extends Component {
 
+  state = {
+    newFeedBack: ''
+  }
 
   // next button to feedback two
   handleClick = () => {
     console.log('Feedback one has been clicked');
     this.props.history.push("/feedbacktwo");
     this.props.dispatch({ type: 'ADD_FEEDBACK', payload: this.state.newFeedBack});
+    // newFeedBack
   }
 
   // handleChange to setState with new data when NEXT button is clicked
@@ -36,4 +41,4 @@ class FeedBackOne extends Component {
   }
 }
 
-export default connect()(FeedBackOne);
+export default withRouter(connect()(FeedBackOne));

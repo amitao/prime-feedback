@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import {withRouter} from 'react-router-dom';
 
 
 class FeedBackTwo extends Component {
+
+  state = {
+    newFeedBack: ''
+  }
 
   handleClick = () => {
     console.log('Two has been clicked');
@@ -34,4 +39,4 @@ class FeedBackTwo extends Component {
   }
 }
 
-export default connect()(FeedBackTwo);
+export default withRouter(connect()(FeedBackTwo));

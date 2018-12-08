@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import {withRouter} from 'react-router-dom';
 
 
 class FeedBackThree extends Component {
+
+  state = {
+    newFeedBack: ''
+  }
 
   // Next button to feedback four
   handleClick = () => {
@@ -35,4 +40,4 @@ class FeedBackThree extends Component {
   }
 }
 
-export default connect()(FeedBackThree);
+export default withRouter(connect()(FeedBackThree));
