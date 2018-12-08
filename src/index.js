@@ -9,9 +9,10 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import logger from 'redux-logger';
 
 // reducers to add feedbacks
-const enterFeedBackReducer = (state = [], action) => {
+const enterFeedBackReducer = (state = {}, action) => {
   if (action.type === 'ADD_FEEDBACK'){
-    return [...state, action.payload]
+    return {...state, [action.payload.key]: action.payload.value}
+    // [ in object is setting key] - setting value equal to the value we sending
   }
   return state
 }

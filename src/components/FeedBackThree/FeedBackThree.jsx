@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import {withRouter} from 'react-router-dom';
+import Review from '../Review/Review';
 
 
 class FeedBackThree extends Component {
@@ -35,6 +36,7 @@ class FeedBackThree extends Component {
           </div>
           <button onClick={this.handleClick}>NEXT</button>
         </div> {/* .box */}
+        <Review />
       </div>
     )
   }
