@@ -13,7 +13,7 @@ class FeedBackOne extends Component {
   }
 
   // handleChange to setState with new data when NEXT button is clicked
-  HandleChange = (event) => {
+  handleChange = (event) => {
     this.setState({
       newFeedBack: event.target.value
     })
@@ -27,10 +27,10 @@ class FeedBackOne extends Component {
         <div className="box">
           <div>
             <p>How are you feeling today?</p>
-            <input onChange={this.HandleChange}/>
+            <input onChange={this.handleChange}/>
           </div>
           <button onClick={this.handleClick}>NEXT</button>
-        </div> {/* .box-border */}
+        </div> {/* .box */}
       </div> 
     )
   }
