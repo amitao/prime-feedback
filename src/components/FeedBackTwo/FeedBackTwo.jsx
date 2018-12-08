@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import {withRouter} from 'react-router-dom';
+import Review from '../Review/Review';
 
 
 class FeedBackTwo extends Component {
 
+  state = {
+    newFeedBack: ''
+  }
+
   handleClick = () => {
     console.log('Two has been clicked');
     this.props.history.push("/feedbackthree");
-    this.props.dispatch({ type: 'ADD_FEEDBACK', payload: this.state.newFeedBack });
+    this.props.dispatch({ type: 'ADD_FEEDBACK', payload: {key: 'Understanding', value: this.state.newFeedBack} });
   }
 
   handleChange = (event) => {
@@ -29,9 +35,10 @@ class FeedBackTwo extends Component {
           </div>
           <button onClick={this.handleClick}>NEXT</button>
         </div> {/* .box */}
+        <Review />
       </div>
     )
   }
 }
 
-export default connect()(FeedBackTwo);
+export default withRouter(connect()(FeedBackTwo));
