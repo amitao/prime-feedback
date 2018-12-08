@@ -8,11 +8,21 @@ import { Provider } from "react-redux";
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import logger from 'redux-logger';
 
+// reducers to add feedbacks
+const enterFeedBackReducer = (state = [], action) => {
+  if (action.type === 'ADD_FEEDBACK'){
+    return [...state, action.payload]
+  }
+  return state
+}
+
+
+
 
 const storeInstance = createStore(
   // reducers
   combineReducers({
-
+    enterFeedBackReducer
   }),
   // enhancer
   applyMiddleware(logger)
