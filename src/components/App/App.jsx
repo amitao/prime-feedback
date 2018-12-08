@@ -4,7 +4,7 @@ import FeedBackOne from '../FeedBackOne/FeedBackOne';
 import FeedBackTwo from '../FeedBackTwo/FeedBackTwo';
 import FeedBackThree from '../FeedBackThree/FeedBackThree';
 import FeedBackFour from '../FeedBackFour/FeedBackFour';
-import SubmitFeedBack from '../SubmitFeedBack/SubmitFeedBack';
+import FeedBackResults from '../FeedBackResults/FeedBackResults';
 import axios from 'axios';
 import './App.css';
 import { connect } from 'react-redux';
@@ -13,11 +13,6 @@ import { HashRouter as Router, Route } from 'react-router-dom';
 
 
 class App extends Component {
-
-  state = {
-    newFeedBack: ''
-  }
-
 
   render() {
     return (
@@ -29,8 +24,9 @@ class App extends Component {
             <Route path='/feedbacktwo' component={FeedBackTwo} />
             <Route path='/feedbackthree' component={FeedBackThree} />
             <Route path='/feedbackfour' component={FeedBackFour} />
-            <Route path='/submit' component={SubmitFeedBack} />
+            <Route path='/result' component={FeedBackResults} />
           </div>
+          
         </div>
       </Router>
     );

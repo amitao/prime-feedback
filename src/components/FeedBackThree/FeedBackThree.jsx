@@ -1,23 +1,45 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import {withRouter} from 'react-router-dom';
+import Review from '../Review/Review';
 
 
 class FeedBackThree extends Component {
+
+  state = {
+    newFeedBack: ''
+  }
 
   // Next button to feedback four
   handleClick = () => {
     console.log('Three has been clicked');
     this.props.history.push("/feedbackfour");
+    this.props.dispatch({ type: 'ADD_FEEDBACK', payload: {key:'Support',value: this.state.newFeedBack} });
   }
-  
 
-  render () {
+
+  handleChange = (event) => {
+    this.setState({
+      newFeedBack: event.target.value
+    })
+  }
+
+  render() {
     return (
       <div>
         <h1>FeedBack Three</h1>
-        <button onClick={this.handleClick}>NEXT</button>
+        <p>3 of 4 pages</p>
+        <div className="box">
+          <div>
+            <p>How well are you being supported?</p>
+            <input onChange={this.handleChange} />
+          </div>
+          <button onClick={this.handleClick}>NEXT</button>
+        </div> {/* .box */}
+        <Review />
       </div>
     )
   }
 }
 
-export default FeedBackThree;
+export default withRouter(connect()(FeedBackThree));
