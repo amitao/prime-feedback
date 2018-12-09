@@ -12,12 +12,10 @@ import logger from 'redux-logger';
 const enterFeedBackReducer = (state = {}, action) => {
   if (action.type === 'ADD_FEEDBACK'){
     return {...state, [action.payload.key]: action.payload.value}
-    // [ in object is setting key] - setting value equal to the value we sending
+    // [ in object is setting key] - setting value equal to the value we are sending
   }
   return state
 }
-
-
 
 
 const storeInstance = createStore(
