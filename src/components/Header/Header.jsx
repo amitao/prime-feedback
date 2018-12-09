@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import './Header.css';
 
 
 class Header extends Component {
   render () {
     return (
-      <div>
+      <div className="header-box">
         <h1>FeedBack</h1>
       </div>
     )

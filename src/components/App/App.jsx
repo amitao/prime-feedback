@@ -12,12 +12,13 @@ import { HashRouter as Router, Route } from 'react-router-dom';
 
 
 
+
 class App extends Component {
 
   render() {
     return (
       <Router>
-        <div>
+        <div className="container">
           <Header />
           <div className="App">
             <Route path='/' exact component={FeedBackOne} />

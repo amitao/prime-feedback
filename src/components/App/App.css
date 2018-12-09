@@ -1,4 +1,12 @@
+.container {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .App {
+  margin-top: 2em;
   width: 400px;
   text-align: center;
   border: 5px solid blue;
