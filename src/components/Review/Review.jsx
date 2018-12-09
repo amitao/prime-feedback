@@ -16,6 +16,7 @@ class Review extends Component {
     console.log('Review has been clicked');
     this.props.history.push('/result')
   }
+  
   render () {
 
     const objects = [];
