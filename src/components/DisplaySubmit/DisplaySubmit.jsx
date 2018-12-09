@@ -4,7 +4,7 @@ import {withRouter} from 'react-router-dom';
 import axios from 'axios';
 
 // Component to displays all the components
-class Review extends Component {
+class DisplaySubmit extends Component {
 
 
   handleClick = () => {
@@ -22,11 +22,11 @@ class Review extends Component {
 
    console.log('sending data in redux store:', feedbackData);
 
-
+   // Axios POST to send redux data to DB
     axios.post('/api/feedback',feedbackData)
     .then( response => {
       console.log(response);
-      this.props.history.push('/result');
+      this.props.history.push('/thankyou');
     })
     .catch( err => {
       console.log('ERROR in POST request', err);
@@ -66,4 +66,4 @@ const mapStateToProps = (reduxState) => {
   }
 }
 
-export default withRouter(connect(mapStateToProps)(Review));
+export default withRouter(connect(mapStateToProps)(DisplaySubmit));

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import {withRouter} from 'react-router-dom';
-import Review from '../Review/Review';
+import DisplaySubmit from '../DisplaySubmit/DisplaySubmit';
 
 
 class FeedBackOne extends Component {
@@ -37,7 +37,7 @@ class FeedBackOne extends Component {
           </div>
           <button onClick={this.handleClick}>NEXT</button>
         </div> {/* .box */}
-        <Review />
+        <DisplaySubmit />
       </div> 
     )
   }

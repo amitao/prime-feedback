@@ -4,7 +4,7 @@ import FeedBackOne from '../FeedBackOne/FeedBackOne';
 import FeedBackTwo from '../FeedBackTwo/FeedBackTwo';
 import FeedBackThree from '../FeedBackThree/FeedBackThree';
 import FeedBackFour from '../FeedBackFour/FeedBackFour';
-import FeedBackResults from '../FeedBackResults/FeedBackResults';
+import Thankyou from '../Thankyou/Thankyou';
 // import axios from 'axios';
 import './App.css';
 import { connect } from 'react-redux';
@@ -24,7 +24,7 @@ class App extends Component {
             <Route path='/feedbacktwo' component={FeedBackTwo} />
             <Route path='/feedbackthree' component={FeedBackThree} />
             <Route path='/feedbackfour' component={FeedBackFour} />
-            <Route path='/result' component={FeedBackResults} />
+            <Route path='/thankyou' component={Thankyou} />
           </div>
           
         </div>
