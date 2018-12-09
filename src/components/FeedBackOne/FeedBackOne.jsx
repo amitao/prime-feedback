@@ -7,21 +7,21 @@ import Review from '../Review/Review';
 class FeedBackOne extends Component {
 
   state = {
-    newFeedBack: ''
+    feeling: ''
   }
 
   // next button to feedback two
   handleClick = () => {
     console.log('Feedback one has been clicked');
+    this.props.dispatch({ type: 'ADD_FEEDBACK', payload: {key:'Feeling',value: this.state.feeling}});
     this.props.history.push("/feedbacktwo");
-    this.props.dispatch({ type: 'ADD_FEEDBACK', payload: {key:'Feelings',value: this.state.newFeedBack}});
     // newFeedBack
   }
 
   // handleChange to setState with new data when NEXT button is clicked
   handleChange = (event) => {
     this.setState({
-      newFeedBack: event.target.value
+      feeling: event.target.value
     })
   }
 
@@ -33,7 +33,7 @@ class FeedBackOne extends Component {
         <div className="box">
           <div>
             <p>How are you feeling today?</p>
-            <input onChange={this.handleChange}/>
+            <input type="number" onChange={this.handleChange}/>
           </div>
           <button onClick={this.handleClick}>NEXT</button>
         </div> {/* .box */}

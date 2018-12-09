@@ -30,7 +30,7 @@ class FeedBackFour extends Component {
         <div className="box">
           <div>
             <p>Comments</p>
-            <input onChange={this.handleChange} />
+            <input type="text" onChange={this.handleChange} />
           </div>
           <button onClick={this.handleClick}>Enter</button>
         </div>

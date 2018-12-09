@@ -7,20 +7,20 @@ import Review from '../Review/Review';
 class FeedBackThree extends Component {
 
   state = {
-    newFeedBack: ''
+    support: ''
   }
 
   // Next button to feedback four
   handleClick = () => {
     console.log('Three has been clicked');
+    this.props.dispatch({ type: 'ADD_FEEDBACK', payload: {key:'Support',value: this.state.support} });
     this.props.history.push("/feedbackfour");
-    this.props.dispatch({ type: 'ADD_FEEDBACK', payload: {key:'Support',value: this.state.newFeedBack} });
   }
 
 
   handleChange = (event) => {
     this.setState({
-      newFeedBack: event.target.value
+      support: event.target.value
     })
   }
 
@@ -32,7 +32,7 @@ class FeedBackThree extends Component {
         <div className="box">
           <div>
             <p>How well are you being supported?</p>
-            <input onChange={this.handleChange} />
+            <input type="number" onChange={this.handleChange} />
           </div>
           <button onClick={this.handleClick}>NEXT</button>
         </div> {/* .box */}

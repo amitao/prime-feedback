@@ -1,20 +1,36 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import {withRouter} from 'react-router-dom';
+import axios from 'axios';
 
 // Component to displays all the components
 class Review extends Component {
 
-  // state ={
-  //   complete: false
-  // }
 
   handleClick = () => {
-    // this.setState({
-    //   complete: true
-    // })
-    console.log('Review has been clicked');
-    this.props.history.push('/result')
+    // displays data from redux store in console
+    // console.log('sending data:', this.props.reduxState);
+
+    const feedback = this.props.reduxState.enterFeedBackReducer;
+
+    let feedbackData = {
+      feeling: feedback.Feeling,
+      understanding: feedback.Understanding,
+      support: feedback.Support,
+      comments: feedback.Comments
+    }
+
+   console.log('sending data in redux store:', feedbackData);
+
+
+    axios.post('/api/feedback',feedbackData)
+    .then( response => {
+      console.log(response);
+      this.props.history.push('/result');
+    })
+    .catch( err => {
+      console.log('ERROR in POST request', err);
+    })
   }
   
   render () {
@@ -31,14 +47,6 @@ class Review extends Component {
     // let displayFeedback = this.props.reduxState.enterFeedBackReducer.map( feedback => {
     //   return <p key={feedback}> {} {feedback}</p>
     // })
-
-    // let btn; 
-
-    // if (this.state.complete){
-    //   btn = <button onClick={this.handleClick}>Submit</button>
-    // } else {
-    //   btn = <button onClick={this.handleClick}>inComplete</button>
-    // }
     
     return (
       <div>
