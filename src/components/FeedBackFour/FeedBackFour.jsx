@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import Review from '../Review/Review';
+import DisplaySubmit from '../DisplaySubmit/DisplaySubmit';
 
 
 class FeedBackFour extends Component {
@@ -12,8 +12,7 @@ class FeedBackFour extends Component {
 
   handleClick = () => {
     console.log('Four has been clicked');
-    // submit to DB 
-    // this.props.history.push("/result");
+    
     this.props.dispatch({ type: 'ADD_FEEDBACK', payload: {key:'Comments',value: this.state.comment}})
   }
 
@@ -34,7 +33,7 @@ class FeedBackFour extends Component {
           </div>
           <button onClick={this.handleClick}>Enter</button>
         </div>
-        <Review />
+        <DisplaySubmit />
       </div>
     )
   }
