@@ -25,7 +25,7 @@ class FeedBackFour extends Component {
   render() {
     return (
       <div>
-        <h2>1 of 4 pages</h2>
+        <h2>4 of 4 pages</h2>
         <div className="box">
           <div>
           <p className="questions">Any comments for us?</p>
