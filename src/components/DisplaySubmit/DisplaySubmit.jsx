@@ -13,6 +13,7 @@ class DisplaySubmit extends Component {
 
     const feedback = this.props.reduxState.enterFeedBackReducer;
 
+    // assigned data in redux storre to feedbackData and pass it to axios.post()
     let feedbackData = {
       feeling: feedback.Feeling,
       understanding: feedback.Understanding,
@@ -26,6 +27,7 @@ class DisplaySubmit extends Component {
     axios.post('/api/feedback',feedbackData)
     .then( response => {
       console.log(response);
+      // url to direct you back to next component/page - thankyou
       this.props.history.push('/thankyou');
     })
     .catch( err => {
@@ -35,9 +37,12 @@ class DisplaySubmit extends Component {
   
   render () {
 
+    // declared empty array to push reducer "enterFeedBackReducer" object to display
     const objects = [];
+    // assigned data from reducer to variable 
     const reducerState = this.props.reduxState.enterFeedBackReducer; // {k:v}
 
+    // loop through object value in reducer and push into object array[]
     for(const key in reducerState){
       objects.push(
         <p className="display-p-tag" key={key}>{key}: {reducerState[key]}</p>
@@ -50,7 +55,7 @@ class DisplaySubmit extends Component {
     
     return (
       <div>
-        <h2>feedbacks results:</h2>
+        <h2>feedback results:</h2>
           <div>
           { objects }
           </div>
@@ -66,4 +71,4 @@ const mapStateToProps = (reduxState) => {
   }
 }
 
-export default withRouter(connect(mapStateToProps)(DisplaySubmit));
+export default connect(mapStateToProps)(DisplaySubmit);

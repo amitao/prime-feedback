@@ -21,7 +21,8 @@ class App extends Component {
     return (
       <Router>
         <div className="main">
-          <Header />
+        {/* header can be outside of <Router> */}
+          <Header /> 
           <div className="App">
             <Route path='/' exact component={FeedBackOne} />
             <Route path='/feedbacktwo' component={FeedBackTwo} />

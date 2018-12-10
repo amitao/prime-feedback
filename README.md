@@ -1,6 +1,9 @@
+PRIME FEEDBACK APP
+App let students to add feedback and save it to the database.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Available Scripts
 
 In the project directory, you can run:
 
