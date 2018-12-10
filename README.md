@@ -1,5 +1,5 @@
 # PRIME FEEDBACK APP
-App let students to add feedback and save it to the database.
+App let students add feedback and save it to the database.
 
 # Built with
 JavaScript, React, Redux, Postgresql, Node.js, and Express
