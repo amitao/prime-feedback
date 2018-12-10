@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import {withRouter} from 'react-router-dom';
 import DisplaySubmit from '../DisplaySubmit/DisplaySubmit';
 
 
@@ -40,4 +39,4 @@ class FeedBackTwo extends Component {
   }
 }
 
-export default withRouter(connect()(FeedBackTwo));
+export default connect()(FeedBackTwo);

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
 import DisplaySubmit from '../DisplaySubmit/DisplaySubmit';
 
 
@@ -12,10 +11,11 @@ class FeedBackFour extends Component {
 
   handleClick = () => {
     console.log('Four has been clicked');
-    
+    // dispatch to send data to redux store with key and value
     this.props.dispatch({ type: 'ADD_FEEDBACK', payload: {key:'Comments',value: this.state.comment}})
   }
 
+  // function to input value 
   handleChange = (event) => {
     this.setState({
       comment: event.target.value
@@ -39,4 +39,4 @@ class FeedBackFour extends Component {
   }
 }
 
-export default withRouter(connect()(FeedBackFour));
+export default connect()(FeedBackFour);

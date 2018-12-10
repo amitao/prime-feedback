@@ -1,13 +1,19 @@
 PRIME FEEDBACK APP
 App let students to add feedback and save it to the database.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Built with
+JavaScript, React, Redux, Node.js, and Express
 
-# Available Scripts
+# Getting started
+- git clone repo
+- npm install
+- create database 
 
-In the project directory, you can run:
+Start app:
+- connect to DB 
+- npm run client
+- npm run server 
 
-### `npm start`
 
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
