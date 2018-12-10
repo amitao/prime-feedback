@@ -7,7 +7,7 @@ class Header extends Component {
     return (
       <div className="header-box">
         {/* <h1 className="h1-styling"></h1> */}
-        <div><img className="fb-image" src="images/feedback24.png" alt="Feedback logo"/></div>
+        <div><img className="fb-image" src="images/feedbackxmas.png" alt="Feedback logo"/></div>
       </div>
     )
   }
