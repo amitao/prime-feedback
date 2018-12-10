@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 class FeedBackResults extends Component {
   render () {
     return (
-      <div>
+      <div className="box">
         <h1>Thank you! Your feedback has been submitted.</h1>
       </div>
     )

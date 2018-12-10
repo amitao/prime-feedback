@@ -26,11 +26,10 @@ class FeedBackTwo extends Component {
   render() {
     return (
       <div>
-        <h1>FeedBack Two</h1>
-        <p>2 of 4 pages</p>
+        <h2>2 of 4 pages</h2>
         <div className="box">
           <div>
-            <p>How well are you understanding the content?</p>
+            <p className="questions">How well are you understanding the content?</p>
             <input type="number" onChange={this.handleChange} />
           </div>
           <button onClick={this.handleClick}>NEXT</button>

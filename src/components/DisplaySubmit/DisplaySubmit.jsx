@@ -40,7 +40,7 @@ class DisplaySubmit extends Component {
 
     for(const key in reducerState){
       objects.push(
-        <p key={key}>{key}: {reducerState[key]}</p>
+        <p className="display-p-tag" key={key}>{key}: {reducerState[key]}</p>
         );
     }
 
@@ -50,7 +50,7 @@ class DisplaySubmit extends Component {
     
     return (
       <div>
-        <h1>Review the feedbacks</h1>
+        <h2>feedbacks results:</h2>
           <div>
           { objects }
           </div>

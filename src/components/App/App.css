@@ -1,22 +1,47 @@
+.main {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .App {
-  width: 400px;
+  margin: 3em 0;
+  width: 500px;
   text-align: center;
-  border: 5px solid blue;
+  border: 3px solid #e8e8e8;
+  border-radius: 5px;
   padding: 1em 0;
+
 }
 
-.App-header {
-  background-color: #033076;
-  min-height: 70px;
-  padding: 20px;
-  color: white;
+.bg-image{
+  width:100%;
 }
 
-.App-title {
+.box {
+  background-color: #e8e8e8;
+  padding: 1em;
+}
+
+
+.questions {
   font-size: 1.5em;
 }
 
-.App-intro {
-  font-size: large;
+button {
+  margin: 1em 0;
+  padding: .5em 1.5em;
+  /* background-color: #6b8274; */
+  color: #6b8274;
+  border-radius: 3px;
+  border: 2px solid #6b8274;
+  font-size: .8em;
 }
 
+input {
+  width: 300px;
+  padding: .7em 1em;
+  border-radius: 3px;
+  border: 1px solid #e8e8e8;
+}
