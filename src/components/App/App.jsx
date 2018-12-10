@@ -9,7 +9,6 @@ import Thankyou from '../Thankyou/Thankyou';
 import './App.css';
 import { connect } from 'react-redux';
 import { HashRouter as Router, Route } from 'react-router-dom';
-import Button from '@material-ui/core/Button';
 
 
 
@@ -29,7 +28,7 @@ class App extends Component {
             <Route path='/feedbackfour' component={FeedBackFour} />
             <Route path='/thankyou' component={Thankyou} />
           </div>
-          <img className="bg-image" src="images/vegaBG24.png"/>
+          <img className="bg-image" src="images/vegaBG24.png" alt="background"/>
         </div>
       </Router>
     );
