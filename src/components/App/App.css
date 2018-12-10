@@ -1,4 +1,4 @@
-.container {
+.main {
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -9,16 +9,11 @@
   margin-top: 2em;
   width: 400px;
   text-align: center;
-  border: 5px solid blue;
+  border: 3px solid #e8e8e8;
+  border-radius: 5px;
   padding: 1em 0;
 }
 
-.App-header {
-  background-color: #033076;
-  min-height: 70px;
-  padding: 20px;
-  color: white;
-}
 
 .App-title {
   font-size: 1.5em;
@@ -28,3 +23,6 @@
   font-size: large;
 }
 
+.bg-image{
+  width:100%;
+}
