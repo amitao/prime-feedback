@@ -1,15 +1,15 @@
-PRIME FEEDBACK APP
+# PRIME FEEDBACK APP
 App let students to add feedback and save it to the database.
 
 # Built with
-JavaScript, React, Redux, Node.js, and Express
+JavaScript, React, Redux, Postgresql, Node.js, and Express
 
 # Getting started
 - git clone repo
 - npm install
 - create database 
 
-Start app:
+## Start app:
 - connect to DB 
 - npm run client
 - npm run server 
@@ -19,10 +19,10 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 # Prerequisties
 - Node.js
+- Express
+- Routes
+- Postgresql
 
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
