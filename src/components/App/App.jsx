@@ -5,6 +5,7 @@ import FeedBackTwo from '../FeedBackTwo/FeedBackTwo';
 import FeedBackThree from '../FeedBackThree/FeedBackThree';
 import FeedBackFour from '../FeedBackFour/FeedBackFour';
 import Thankyou from '../Thankyou/Thankyou';
+import Admin from '../Admin/Admin';
 // import axios from 'axios';
 import './App.css';
 import { connect } from 'react-redux';
@@ -27,6 +28,7 @@ class App extends Component {
             <Route path='/feedbackthree' component={FeedBackThree} />
             <Route path='/feedbackfour' component={FeedBackFour} />
             <Route path='/thankyou' component={Thankyou} />
+            <Route path='/admin' component={Admin} />
           </div>
           <img className="bg-image" src="images/vegaBG24.png" alt="background"/>
         </div>
