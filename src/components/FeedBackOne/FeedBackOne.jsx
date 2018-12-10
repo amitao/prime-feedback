@@ -28,11 +28,10 @@ class FeedBackOne extends Component {
   render() {
     return (
       <div>
-        <h1>FeedBack One</h1>
-        <p>1 of 4 pages</p>
+        <h2>1 of 4 pages</h2>
         <div className="box">
           <div>
-            <p>How are you feeling today?</p>
+            <p className="questions">How are you feeling today?</p>
             <input type="number" onChange={this.handleChange}/>
           </div>
           <button onClick={this.handleClick}>NEXT</button>

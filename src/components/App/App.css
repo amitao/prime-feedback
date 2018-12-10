@@ -6,23 +6,42 @@
 }
 
 .App {
-  margin-top: 2em;
-  width: 400px;
+  margin: 3em 0;
+  width: 500px;
   text-align: center;
   border: 3px solid #e8e8e8;
   border-radius: 5px;
   padding: 1em 0;
-}
 
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
 }
 
 .bg-image{
   width:100%;
+}
+
+.box {
+  background-color: #e8e8e8;
+  padding: 1em;
+}
+
+
+.questions {
+  font-size: 1.5em;
+}
+
+button {
+  margin: 1em 0;
+  padding: .5em 1.5em;
+  /* background-color: #6b8274; */
+  color: #6b8274;
+  border-radius: 3px;
+  border: 2px solid #6b8274;
+  font-size: .8em;
+}
+
+input {
+  width: 300px;
+  padding: .7em 1em;
+  border-radius: 3px;
+  border: 1px solid #e8e8e8;
 }

@@ -27,11 +27,10 @@ class FeedBackThree extends Component {
   render() {
     return (
       <div>
-        <h1>FeedBack Three</h1>
-        <p>3 of 4 pages</p>
+        <h2>3 of 4 pages</h2>
         <div className="box">
           <div>
-            <p>How well are you being supported?</p>
+            <p className="questions">How well are you being supported?</p>
             <input type="number" onChange={this.handleChange} />
           </div>
           <button onClick={this.handleClick}>NEXT</button>
