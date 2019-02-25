@@ -59,7 +59,7 @@ class DisplaySubmit extends Component {
           <div>
           { objects }
           </div>
-          <button onClick={this.handleClick}>SUBMIT TO DB</button>
+          <button onClick={this.handleClick}>SUBMIT</button>
       </div>
     )
   }
@@ -71,4 +71,4 @@ const mapStateToProps = (reduxState) => {
   }
 }
 
-export default connect(mapStateToProps)(DisplaySubmit);
+export default connect(mapStateToProps)(withRouter(DisplaySubmit));

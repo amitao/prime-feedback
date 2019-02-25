@@ -26,8 +26,16 @@ class Admin extends Component {
   }
 
 
-  handleDelete = () => {
+  handleDelete = (id) => {
     console.log('Delete button has been clicked');
+    axios({
+      method: 'DELETE',
+      url: `/api/feedback/${id}`
+    }).then( response => {
+      this.getFeedback();
+    }).catch( err => {
+      console.log('error in Delete request', err);
+    })
   }
 
   render () {
@@ -38,7 +46,7 @@ class Admin extends Component {
               <td>{feedback.understanding}</td>
               <td>{feedback.support}</td>
               <td>{feedback.comments}</td>
-              <td><button onClick={this.handleDelete}>DELETE</button></td>
+              <td><button onClick={()=> this.handleDelete(feedback.id)}>DELETE</button></td>
               </tr>
     })
 
