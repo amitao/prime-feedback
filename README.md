@@ -9,6 +9,27 @@ JavaScript, React, Redux, Postgresql, Node.js, and Express
 - npm install
 - create database 
 
+## Create Database
+-- Database should be prime_feedback
+CREATE DATABASE "feedback_prime";
+
+-- Switch to "prime_feedback" before making:
+-- Table to store the feedback
+CREATE TABLE "feedback" (
+  "id" serial primary key,
+  "feeling" INT not null,
+  "understanding" INT not null,
+  "support" INT not null,
+  "comments" text,
+  "flagged" boolean default false,
+  "date" date not null default CURRENT_DATE
+); 
+
+-- Sample feedback item
+INSERT INTO "feedback" ("feeling", "understanding", "support", "comments")
+VALUES (4, 4, 5, 'Doing Great!');
+
+
 ## Start app:
 - connect to DB 
 - npm run client
